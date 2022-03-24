@@ -8,12 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GoogleMapInfo\GoogleMapInfo.csproj" />
+    <Protobuf Include="Protos\distance.proto" GrpcServices="Server" />
+    <Folder Include="Protos\" />
   </ItemGroup>
 
 </Project>
